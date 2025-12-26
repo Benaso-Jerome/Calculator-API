@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Math Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="phone-container">
+        <div class="display">
+            <div id="history" class="history-text"></div>
+            <div id="mainDisplay" class="main-text">0</div>
+            <div id="loading" class="loading-spinner hidden"></div>
+        </div>
+
+        <div class="keypad">
+            <button class="btn func" onclick="append('pi')">π</button>
+            <button class="btn func" onclick="append('^2')">x²</button>
+            <button class="btn func" onclick="append('%')">%</button>
+            <button class="btn op" onclick="append('/')">÷</button>
+
+            <button class="btn num" onclick="append('7')">7</button>
+            <button class="btn num" onclick="append('8')">8</button>
+            <button class="btn num" onclick="append('9')">9</button>
+            <button class="btn op" onclick="append('*')">×</button>
+
+            <button class="btn num" onclick="append('4')">4</button>
+            <button class="btn num" onclick="append('5')">5</button>
+            <button class="btn num" onclick="append('6')">6</button>
+            <button class="btn op" onclick="append('+')">+</button>
+
+            <button class="btn num" onclick="append('1')">1</button>
+            <button class="btn num" onclick="append('2')">2</button>
+            <button class="btn num" onclick="append('3')">3</button>
+
+            <button class="btn equal-tall" id="calcBtn" onclick="handleCalculation()">
+                <hr>
+                <span>=</span>
+            </button>
+
+            <button class="btn num" onclick="append('.')">.</button>
+            <button class="btn num" onclick="append('0')">0</button>
+            <button class="btn num" onclick="clearDisplay()">DEL</button>
+        </div>
+
+        <div id="errorContainer" class="error-msg hidden"></div>
+        <footer class="footer">
+            <p>Source: Newton API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
